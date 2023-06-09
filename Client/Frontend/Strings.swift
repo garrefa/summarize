@@ -2956,6 +2956,11 @@ extension String {
 extension String {
     /// Identifiers of all new strings should begin with `Menu.`
     public struct AppMenu {
+        public static let AppMenuSummarizeSiteContentTitleString = MZLocalizedString(
+            key: "Menu.SummarizeSiteContentAction.Title",
+            tableName: "Menu",
+            value: "Summarize Site Content",
+            comment: "Label for the button, displayed in the menu, used to generate AI summary of the current page.")
         public static let AppMenuReportSiteIssueTitleString = MZLocalizedString(
             key: "Menu.ReportSiteIssueAction.Title",
             tableName: "Menu",

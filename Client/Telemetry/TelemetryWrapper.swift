@@ -475,6 +475,7 @@ extension TelemetryWrapper {
         case sendToDevice = "send-to-device"
         case copyAddress = "copy-address"
         case reportSiteIssue = "report-site-issue"
+        case summaryzeSiteContent = "summaryze-site-content"
         case findInPage = "find-in-page"
         case requestDesktopSite = "request-desktop-site"
         case requestMobileSite = "request-mobile-site"

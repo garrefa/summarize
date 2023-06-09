@@ -246,6 +246,13 @@ class MainMenuActionHelper: PhotonActionSheetProtocol,
             append(to: &section, action: reportSiteIssueAction)
         }
 
+        // We will only summarize websites, not the firefox home page or
+        // tabs with open files
+        if !isHomePage && !isFileURL {
+            let summarizeSiteContentAction = getSummarizeSiteContentAction()
+            append(to: &section, action: summarizeSiteContentAction)
+        }
+
         return section
     }
 
@@ -421,6 +428,16 @@ class MainMenuActionHelper: PhotonActionSheetProtocol,
             guard let tabURL = self.selectedTab?.url?.absoluteString else { return }
             self.delegate?.openURLInNewTab(SupportUtils.URLForReportSiteIssue(tabURL), isPrivate: false)
             TelemetryWrapper.recordEvent(category: .action, method: .tap, object: .reportSiteIssue)
+        }.items
+    }
+
+    private func getSummarizeSiteContentAction() -> PhotonRowActions? {
+        return SingleActionViewModel(title: .AppMenu.AppMenuSummarizeSiteContentTitleString,
+                                     iconString: ImageIdentifiers.reportSiteIssue) { _ in
+            guard let tabURL = self.selectedTab?.url?.absoluteString else { return }
+//            self.delegate?.openURLInNewTab(SupportUtils.URLForReportSiteIssue(tabURL), isPrivate: false)
+            print("yey... lets fire AI summary for \(tabURL)")
+            TelemetryWrapper.recordEvent(category: .action, method: .tap, object: .summaryzeSiteContent)
         }.items
     }
 
