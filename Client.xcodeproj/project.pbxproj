@@ -527,6 +527,13 @@
 		7BEFC6801BFF68C30059C952 /* QuickActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFC67F1BFF68C30059C952 /* QuickActions.swift */; };
 		7BF5A1EA1B41640500EA9DD8 /* SyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */; };
 		7BF5A1EE1B429B3100EA9DD8 /* SyncCommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1ED1B429B3100EA9DD8 /* SyncCommandsTests.swift */; };
+		805CB7CC2A3328AA00730E1C /* SiteSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB7CB2A3328AA00730E1C /* SiteSummaryViewController.swift */; };
+		805CB7F92A33E8E000730E1C /* PumaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB7F82A33E8E000730E1C /* PumaConfig.swift */; };
+		805CB7FC2A34ACEB00730E1C /* PumaBrowserSecrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 805CB7FA2A34ACD700730E1C /* PumaBrowserSecrets.xcconfig */; };
+		805CB7FE2A34BA8C00730E1C /* OpenAIClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB7FD2A34BA8C00730E1C /* OpenAIClientFactory.swift */; };
+		805CB8002A34BAB300730E1C /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB7FF2A34BAB300730E1C /* OpenAIClient.swift */; };
+		805CB8022A34BAD300730E1C /* SiteSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB8012A34BAD300730E1C /* SiteSummaryViewModel.swift */; };
+		805CB8042A34BAF400730E1C /* SiteSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CB8032A34BAF400730E1C /* SiteSummaryView.swift */; };
 		884CA7492344A301002E4711 /* TextContentDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884CA7482344A301002E4711 /* TextContentDetector.swift */; };
 		8A0017C128A3FF6100FEFC8B /* MessageCardDataAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0017C028A3FF6100FEFC8B /* MessageCardDataAdaptor.swift */; };
 		8A01891C275E9C2A00923EFE /* ClearHistorySheetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A01891B275E9C2A00923EFE /* ClearHistorySheetProvider.swift */; };
@@ -4394,6 +4401,14 @@
 		7FAB476EB035F799E1BF1267 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/Intro.strings; sourceTree = "<group>"; };
 		7FCA45BDADEE92EF815319D3 /* sq */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sq; path = sq.lproj/ErrorPages.strings; sourceTree = "<group>"; };
 		80574E82B96F93CDE08B966B /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Intro.strings; sourceTree = "<group>"; };
+		805CB7CB2A3328AA00730E1C /* SiteSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSummaryViewController.swift; sourceTree = "<group>"; };
+		805CB7F82A33E8E000730E1C /* PumaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumaConfig.swift; sourceTree = "<group>"; };
+		805CB7FA2A34ACD700730E1C /* PumaBrowserSecrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = PumaBrowserSecrets.xcconfig; path = Configuration/PumaBrowserSecrets.xcconfig; sourceTree = "<group>"; };
+		805CB7FD2A34BA8C00730E1C /* OpenAIClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClientFactory.swift; sourceTree = "<group>"; };
+		805CB7FF2A34BAB300730E1C /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		805CB8012A34BAD300730E1C /* SiteSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSummaryViewModel.swift; sourceTree = "<group>"; };
+		805CB8032A34BAF400730E1C /* SiteSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSummaryView.swift; sourceTree = "<group>"; };
+		805CB8052A34BEE000730E1C /* README-PUMA.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-PUMA.md"; sourceTree = "<group>"; };
 		809E4D488E089D47E5B2B7ED /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Storage.strings; sourceTree = "<group>"; };
 		80A64F9E9304EFF710BFF857 /* es-CL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-CL"; path = "es-CL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		80B54D93BC553D6E6CDFAA0A /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/AuthenticationManager.strings; sourceTree = "<group>"; };
@@ -7793,6 +7808,27 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		805CB7CA2A33288400730E1C /* AISiteSummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				805CB7FF2A34BAB300730E1C /* OpenAIClient.swift */,
+				805CB7FD2A34BA8C00730E1C /* OpenAIClientFactory.swift */,
+				805CB8032A34BAF400730E1C /* SiteSummaryView.swift */,
+				805CB7CB2A3328AA00730E1C /* SiteSummaryViewController.swift */,
+				805CB8012A34BAD300730E1C /* SiteSummaryViewModel.swift */,
+			);
+			path = AISiteSummaryView;
+			sourceTree = "<group>";
+		};
+		805CB7F52A33E3BA00730E1C /* PumaBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				805CB7CA2A33288400730E1C /* AISiteSummaryView */,
+				805CB7F82A33E8E000730E1C /* PumaConfig.swift */,
+			);
+			path = PumaBrowser;
+			sourceTree = "<group>";
+		};
 		8A0017BF28A3FED300FEFC8B /* MessageCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -9731,11 +9767,12 @@
 			children = (
 				8A2B1A5B28216C4C0061216B /* Common.xcconfig */,
 				8A2B1A5A28216C4C0061216B /* Debug.xcconfig */,
-				8A2B1A5C28216C4D0061216B /* Release.xcconfig */,
-				E60961861B62B8A700DD640F /* Fennec.xcconfig */,
 				E6DCC1ED1DCBB6AA00CEC4B7 /* Fennec.enterprise.xcconfig */,
-				E6FCC43C1C40565200DF6113 /* FirefoxBeta.xcconfig */,
+				E60961861B62B8A700DD640F /* Fennec.xcconfig */,
 				E60961891B62B8C800DD640F /* Firefox.xcconfig */,
+				E6FCC43C1C40565200DF6113 /* FirefoxBeta.xcconfig */,
+				805CB7FA2A34ACD700730E1C /* PumaBrowserSecrets.xcconfig */,
+				8A2B1A5C28216C4D0061216B /* Release.xcconfig */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -10039,6 +10076,7 @@
 		F84B21B51A090F8100AAB793 = {
 			isa = PBXGroup;
 			children = (
+				805CB8052A34BEE000730E1C /* README-PUMA.md */,
 				962C6C39297054A700354BE8 /* Package.swift */,
 				962C6C3F2971F5D400354BE8 /* Dangerfile.swift */,
 				962C6C3B297054EC00354BE8 /* Sources */,
@@ -10270,6 +10308,7 @@
 		F84B21F11A0910F600AAB793 /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
+				805CB7F52A33E3BA00730E1C /* PumaBrowser */,
 				43D00490296FC44B00CB0F31 /* Autofill */,
 				C855728029AE7EF900AF32B0 /* SurveySurface */,
 				8AD40FB827BAD1DD00672675 /* TabContentsScripts */,
@@ -11342,6 +11381,7 @@
 				43A5643923CD1E1C00B6857D /* Update.xcassets in Resources */,
 				C8399D9322DE5E5B00EFA5CA /* disconnect-block-analytics.json in Resources */,
 				E1AF3561286DE5F800960045 /* Smoketest4.xctestplan in Resources */,
+				805CB7FC2A34ACEB00730E1C /* PumaBrowserSecrets.xcconfig in Resources */,
 				EB84945722D4FA8A0004C2E2 /* disconnect-block-fingerprinting.json in Resources */,
 				8A2B1A5D28216C4D0061216B /* Debug.xcconfig in Resources */,
 				0BA1E00E1B03FB0B007675AF /* NetError.html in Resources */,
@@ -12408,6 +12448,7 @@
 				9636D92A27F767EC00771F5E /* NimbusMessagingEvaluationUtility.swift in Sources */,
 				E127313F28B6C194006F39D2 /* WallpaperSettingsHeaderView.swift in Sources */,
 				2FDE87FE1ABB3817005317B1 /* RemoteTabsPanel.swift in Sources */,
+				805CB7CC2A3328AA00730E1C /* SiteSummaryViewController.swift in Sources */,
 				8A3EF80F2A2FD05D00796E3A /* ToggleInactiveTabs.swift in Sources */,
 				435222C125882E3800FCA5B6 /* WidgetKitTopSiteModel.swift in Sources */,
 				96EB6C3E27D9266500A9D159 /* HistoryActionables.swift in Sources */,
@@ -12555,11 +12596,13 @@
 				0BA02DB22942605600C92603 /* CreditCardHelper.swift in Sources */,
 				E68AEDB01B18F81A00133D99 /* SwipeAnimator.swift in Sources */,
 				3BF56D271CDBBE1F00AC4D75 /* SimpleToast.swift in Sources */,
+				805CB8022A34BAD300730E1C /* SiteSummaryViewModel.swift in Sources */,
 				C8B0F5F6283B7CCE007AE65D /* PocketStory.swift in Sources */,
 				C81AC6B626160091007800C5 /* TabTrayViewModel.swift in Sources */,
 				C8EDDBF229DF1159003A4C07 /* URLScanner.swift in Sources */,
 				EBB89504219398E500EB91A0 /* TrackingProtectionPageStats.swift in Sources */,
 				D31F95E91AC226CB005C9F3B /* ScreenshotHelper.swift in Sources */,
+				805CB8002A34BAB300730E1C /* OpenAIClient.swift in Sources */,
 				8A5D1CA62A30D6BD005AD35C /* NewTabPageSetting.swift in Sources */,
 				D3968F251A38FE8500CEFD3B /* TabManager.swift in Sources */,
 				2178A6A229145506002EC290 /* ReaderModeFontSizeLabel.swift in Sources */,
@@ -12594,6 +12637,7 @@
 				2137786529832C8900D01309 /* OverlayModeManager.swift in Sources */,
 				8AF99B4D29EF076800108DEC /* WebviewViewController.swift in Sources */,
 				3B39EDCB1E16E1AA00EF029F /* CustomSearchViewController.swift in Sources */,
+				805CB8042A34BAF400730E1C /* SiteSummaryView.swift in Sources */,
 				C8B0F5F7283B7CCE007AE65D /* PocketFeedStory.swift in Sources */,
 				96A562A027D6D0E80045144A /* ContileProvider.swift in Sources */,
 				8A5D1CAC2A30D70B005AD35C /* OpenWithSetting.swift in Sources */,
@@ -12618,12 +12662,14 @@
 				F85C7EDF2710B4DD004BDBA4 /* LoginOnboarding.swift in Sources */,
 				C8B0F5F5283B7CCE007AE65D /* PocketSponsoredStory.swift in Sources */,
 				8AB8571F27D931B40075C173 /* EmptyTopSiteCell.swift in Sources */,
+				805CB7F92A33E8E000730E1C /* PumaConfig.swift in Sources */,
 				CAC458F1249429C20042561A /* LoginListSelectionHelper.swift in Sources */,
 				EB9A178E20E525DF00B12184 /* ThemeSettingsController.swift in Sources */,
 				C8656D75270F834600E199EA /* FlaggableFeatureOptions.swift in Sources */,
 				C8CD80D82A1E31C20097C3AE /* NimbusOnboardingConfigUtility.swift in Sources */,
 				8AB8573727D951640075C173 /* HomeLogoHeaderViewModel.swift in Sources */,
 				D3C744CD1A687D6C004CE85D /* URIFixup.swift in Sources */,
+				805CB7FE2A34BA8C00730E1C /* OpenAIClientFactory.swift in Sources */,
 				43D16B8029831DC5009F8279 /* CreditCardInputView.swift in Sources */,
 				21112968289480630082C08B /* HomepageMessageCardViewModel.swift in Sources */,
 				E1CD81BE290C5C7500124B27 /* DevicePickerTableViewHeaderCell.swift in Sources */,

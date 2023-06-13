@@ -113,3 +113,6 @@ nimbus-fml/
 
 # tmp files
 /test-fixtures/tmp/*
+
+# Puma Browser
+PumaBrowserSecrets.xcconfig
